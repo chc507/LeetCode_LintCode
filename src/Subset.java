@@ -29,7 +29,7 @@ public class Subset {
         backtrack(list, new ArrayList<>(), nums, 0); //empty set
         return list;
     }
-
+    //body of recursion
     public void backtrack(List<List<Integer>> list, List<Integer> tempList, int[] nums, int start){
         list.add(new ArrayList<>(tempList));//add previous set
         System.out.println("list" + list);
