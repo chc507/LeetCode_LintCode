@@ -6,9 +6,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello Leet Code");
         //strStr();
-        subSets();
-
-
+        //subSets();
+        subSetswDups();
     }
 
     public static void strStr(){
@@ -29,17 +28,11 @@ public class Main {
         List<List<Integer>> resultRes = subset1.getSubsetsRecursive(new int[]{0,1,2});
 
 
-        /*
-        System.out.println("result: " );
-        System.out.println("result: " );
-        System.out.println("result: " );
-        System.out.println("result: " );
-        System.out.println("result: " );
-        System.out.println("result: " );
-        System.out.println("result: " );
-        System.out.println("result: " );
-        System.out.println("result: " );
-        */
     }
-    public static void subSets2(){}
+    public static void subSetswDups(){
+        SubsetwDup subsetwDup = new SubsetwDup();
+        List<List<Integer>> result = subsetwDup.getSubsetsRecursive(new int[]{0,1,2,2});
+        System.out.println(result);
+
+    }
 }
