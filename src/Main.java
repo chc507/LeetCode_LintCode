@@ -29,6 +29,9 @@ public class Main {
         System.out.println(strStr2.implementstrStr2("abcdf", "de"));
         System.out.println(strStr2.implementstrStr2("abcdf", "df"));
         System.out.println(strStr2.implementstrStr2("abcdf", ""));
+        System.out.println(strStr2.implementstrStr2("tartarget", "target"));
+        System.out.println(strStr2.implementstrStr2("tartarget", ""));
+        System.out.println(strStr2.implementstrStr2("", "target"));
     }
     public static void subSets(){
         Subset subset1 = new Subset();

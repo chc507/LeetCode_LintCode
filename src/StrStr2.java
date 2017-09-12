@@ -1,8 +1,9 @@
 public class StrStr2 {
     public StrStr2(){}
     public int implementstrStr2(String source, String target){
+        if(target == null || source == null) return -1;
         if(target.length() > source.length()) return -1;
-        if(source.length() == 0 || target.length() == 0) return -1;
+        if(target.length() == 0) return 0;
 
         int sl = 0; //left pointer used in source;
         int sr; //right pointed used in source;
@@ -18,7 +19,7 @@ public class StrStr2 {
                     tp++;
                 }else{
                     tp = 0; //reset the tp
-                    sr ++; //move sr forward
+                   //sr ++; //move sr forward
                     sl = sr; // align sl with sr
                 }
             }
