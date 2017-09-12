@@ -26,8 +26,6 @@ public class Main {
         Subset subset1 = new Subset();
         List<List<Integer>> result = subset1.getSubsets(new int[]{0,1,2,3});
         List<List<Integer>> resultRes = subset1.getSubsetsRecursive(new int[]{0,1,2});
-
-
     }
     public static void subSetswDups(){
         SubsetwDup subsetwDup = new SubsetwDup();

@@ -23,7 +23,6 @@ public class Subset {
 
     }
     //The recursive way
-
     public List<List<Integer>> getSubsetsRecursive(int[] nums){
         List<List<Integer>> list = new ArrayList<>();
         Arrays.sort(nums);
