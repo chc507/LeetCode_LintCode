@@ -10,6 +10,7 @@ public class SubsetwDup{
         backtrack(list, new ArrayList<>(), nums, 0); //empty set
         return list;
     }
+    //recursive way
     public void backtrack(List<List<Integer>> list, List<Integer> tempList, int[] nums, int start){
         list.add(new ArrayList<>(tempList));//add previous set
         for(int i = start; i < nums.length; i++){
