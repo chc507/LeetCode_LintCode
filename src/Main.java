@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -7,7 +6,8 @@ public class Main {
         System.out.println("Hello Leet Code");
         //strStr();
         //subSets();
-        subSetswDups();
+        //subSetswDups();
+        strStr2();
     }
 
     public static void strStr(){
@@ -21,6 +21,14 @@ public class Main {
         System.out.println("result: " + implementStrStr.strStr("abcdefghijk", "ijk"));
         System.out.println("result: " + implementStrStr.strStr("", ""));
         System.out.println("result: " + implementStrStr.strStr("", "a"));
+    }
+    public static void strStr2(){
+        StrStr2 strStr2 = new StrStr2();
+        System.out.println(strStr2.implementstrStr2("abcdf", "abcd"));
+        System.out.println(strStr2.implementstrStr2("abcdf", "bcd"));
+        System.out.println(strStr2.implementstrStr2("abcdf", "de"));
+        System.out.println(strStr2.implementstrStr2("abcdf", "df"));
+        System.out.println(strStr2.implementstrStr2("abcdf", ""));
     }
     public static void subSets(){
         Subset subset1 = new Subset();
