@@ -19,7 +19,6 @@ public class StrStr2 {
                     tp++;
                 }else{
                     tp = 0; //reset the tp
-                   //sr ++; //move sr forward
                     sl = sr; // align sl with sr
                 }
             }
