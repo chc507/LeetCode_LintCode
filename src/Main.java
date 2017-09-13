@@ -76,10 +76,10 @@ public class Main {
         //System.out.println(binarySearch.binarySearchRecursion(new int[]{0,1,2,3,4,5}, 0));
         //System.out.println(binarySearch.binarySearchRecursion(new int[] {}, 1));
         //System.out.println(binarySearch.binarySearchRecursion(null, 1));
-        System.out.println(binarySearch.binarySearchRecursion(new int[] {0,1,2,3,4,5}, -1));
+        //System.out.println(binarySearch.binarySearchRecursion(new int[] {0,1,2,3,4,5}, -1));
         //System.out.println(binarySearch.binarySearchRecursion(new int[] {0,1,2,3,4,5}, 6));
         //System.out.println(binarySearch.binarySearchRecursion(new int[] {0,0,0,0,0,0}, 6));
-        //System.out.println(binarySearch.binarySearchRecursion(new int[] {0,0,0,0,0,0}, 0));
+        System.out.println(binarySearch.binarySearchRecursion(new int[] {0,1,1,1,0,0}, 1));
 
     }
 }
