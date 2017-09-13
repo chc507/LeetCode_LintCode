@@ -8,6 +8,9 @@ public class Main {
         //subSets();
         //subSetswDups();
         //strStr2();
+        //subSetswBit();
+        binarySearch();
+
     }
 
     public static void strStr(){
@@ -43,5 +46,24 @@ public class Main {
         List<List<Integer>> result = subsetwDup.getSubsetsRecursive(new int[]{0,1,2,2});
         System.out.println(result);
 
+    }
+    public static void subSetswBit(){
+        SubsetwBit subsetwBit = new SubsetwBit();
+        System.out.println(subsetwBit.getSubsets(new int[]{1,2,3}));
+    }
+    public static void binarySearch(){
+        BinarySearch binarySearch = new BinarySearch();
+        //System.out.println(binarySearch.binarySearchIterative(new int[]{0,1,2,3,4,5}, 1));
+        //System.out.println(binarySearch.binarySearchIterative(new int[]{0,1,2,3,4,5}, 2));
+        //System.out.println(binarySearch.binarySearchIterative(new int[]{0,1,2,3,4,5}, 3));
+        //System.out.println(binarySearch.binarySearchIterative(new int[]{0,1,2,3,4,5}, 4));
+        System.out.println(binarySearch.binarySearchIterative(new int[]{0,1,2,3,4,5}, 5));
+        System.out.println(binarySearch.binarySearchIterative(new int[]{0,1,2,3,4,5}, 0));
+        //System.out.println(binarySearch.binarySearchIterative(new int[] {}, 1));
+        //System.out.println(binarySearch.binarySearchIterative(null, 1));
+        //System.out.println(binarySearch.binarySearchIterative(new int[] {0,1,2,3,4,5}, -1));
+        //System.out.println(binarySearch.binarySearchIterative(new int[] {0,1,2,3,4,5}, 6));
+        //System.out.println(binarySearch.binarySearchIterative(new int[] {0,0,0,0,0,0}, 6));
+        //System.out.println(binarySearch.binarySearchIterative(new int[] {0,0,0,0,0,0}, 0));
     }
 }
