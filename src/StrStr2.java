@@ -1,4 +1,5 @@
 public class StrStr2 {
+    public int BASE = 10;
     public StrStr2(){}
     public int implementstrStr2(String source, String target){
         if(target == null || source == null) return -1;
@@ -20,6 +21,56 @@ public class StrStr2 {
                 }else{
                     tp = 0; //reset the tp
                     sl = sr; // align sl with sr
+                }
+            }
+        }
+        return -1;
+    }
+    public int strSTR2wRk(String source, String target){
+
+        if(source == null || target == null) {
+            return -1;
+        }
+
+        int m = target.length();
+
+        if( m == 0) {
+            return 0;
+        }
+
+        // 31 ^ m
+        int power = 1;
+        for (int i = 0 ; i < m ; i++) {
+            power =(power * 31) % BASE;
+        }
+
+        //hash code
+        int targetCode = 0;
+        for (int i = 0; i < m; i++){
+            targetCode = (targetCode * 31 + target.charAt(i)) % BASE;
+        }
+
+        int hashCode = 0;
+        for (int i = 0; i < source.length(); i++){
+            //abc + d
+            hashCode = (hashCode * 31 + source.charAt(i)) % BASE;
+
+            if (i < m - 1){
+                continue;
+            }
+
+            // /abcd -d
+            if(i >= m){
+                hashCode = (hashCode*31 - (source.charAt(i - m) * power)) % BASE;
+                if(hashCode < 0){
+                    hashCode += BASE; //roll back
+                }
+            }
+
+            //double check with the String
+            if(hashCode == targetCode){
+                if(source.substring(i - m + 1, i + 1).equals(target)){
+                    return i - m + 1;
                 }
             }
         }

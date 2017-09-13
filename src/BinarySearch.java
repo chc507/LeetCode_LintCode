@@ -10,7 +10,6 @@ public class BinarySearch {
         Arrays.sort(nums);
         int lp = 0;
         int rp = nums.length - 1;
-
             while(lp + 1 < rp){
             //int mid = ( lp + rp ) / 2; //bad idea as lp + rp will over flow easily;
             int mid = lp + (rp - lp)/2;
@@ -46,7 +45,7 @@ public class BinarySearch {
         if(lp <= rp){
             int mid = lp + (rp - lp)/2;
             if (nums[mid] == target) {
-                return target;
+                return mid;
             } else if(nums[mid] > target){
                 return recursiveBody(nums,lp, mid-1, target);
             } else {
