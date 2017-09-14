@@ -148,4 +148,63 @@ public class BinarySearch {
             return nums[rp];
         }
     }
+    public int findPeak(int[] nums){
+        int lp = 1;
+        int rp = nums.length - 2;
+
+        while (lp + 1 < rp){
+            int mid = lp + (rp - lp) / 2;
+            if(nums[mid] < nums[mid - 1]){
+                rp = mid;
+            } else if (nums[mid] < nums[mid + 1]) {
+                lp = mid;
+            } else {
+                rp = mid;
+            }
+        }
+
+        if(nums[lp] >= nums[rp]) {
+            return lp;
+        } else {
+            return rp;
+        }
+    }
+
+    public int rotateSortedArray(int[] nums, int target){
+        if(nums == null || nums.length == 0) {
+            return 0;
+        }
+
+        int lp = 0;
+        int rp = nums.length - 1;
+
+        while (lp + 1 < rp) {
+            int mid = lp + (rp - lp) / 2;
+            if (nums[mid] == target){
+                return mid;
+            }
+            if (nums[lp] < nums[mid] ) { //on the left of the pivot
+                if (target >= nums[lp] && target <= nums[mid]){ // target is located between mid and lp
+                    rp = mid;
+                } else {
+                    lp = mid;
+                }
+            } else { //pivot is included.
+                if (target <= nums[rp] && target >= nums[mid]){ // target on the right of the pivot, to rp
+                    lp = mid;
+                } else { // target on the left of the pivot
+                    rp = mid;
+                }
+            }
+        }
+
+        if (nums[lp] == target) {
+            return lp;
+        }
+        if(nums[rp] == target) {
+            return rp;
+        }
+
+        return -1;
+    }
 }
