@@ -120,8 +120,32 @@ public class BinarySearch {
         if (nums[lp] == target) {
             return lp;
         }
-
         return -1;
 
+    }
+
+    public int maxNumberInMountain(int[] nums){
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+
+        //search the number using binary search,
+        int lp = 0;
+        int rp = nums.length - 1;
+
+        while(lp + 1 < rp) {
+            int mid = lp + (rp - lp) / 2;
+            if (mid + 1 < nums.length && nums[mid] <= nums[mid + 1]) { //The sequence is incresing
+                lp = mid;
+            } else if (mid + 1 < nums.length && nums[mid] >= nums[mid + 1]) { //The sequence is decreasing
+                rp = mid;
+            }
+        }
+
+        if(nums[lp] >= nums[rp]){
+            return nums[lp];
+        }else{
+            return nums[rp];
+        }
     }
 }

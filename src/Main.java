@@ -93,6 +93,15 @@ public class Main {
         //System.out.println(binarySearch.binarySearchRecursion(new int[] {0,0,0,0,0,0}, 6));
         //System.out.println(binarySearch.binarySearchRecursion(new int[] {0,0,1,1,2,2}, 2));
         //System.out.println(binarySearch.binarySearchFirst(new int[]{1, 2, 3, 3, 4, 5, 10}, 3));
-        System.out.println(binarySearch.binarySearchLast(new int[]{1, 3, 3, 3,3,3,3,3, 4}, 3));
+        //System.out.println(binarySearch.binarySearchLast(new int[]{1, 3, 3, 3,3,3,3,3, 4}, 3));
+        System.out.println(binarySearch.maxNumberInMountain(new int[]{0,2,1}));
+        System.out.println(binarySearch.maxNumberInMountain(new int[]{}));
+        System.out.println(binarySearch.maxNumberInMountain(new int[]{0,0,0}));
+        System.out.println(binarySearch.maxNumberInMountain(new int[]{0,1,1,0}));
+        System.out.println(binarySearch.maxNumberInMountain(null));
+        System.out.println(binarySearch.maxNumberInMountain(new int[]{0,9,10,12,8, 7 ,6,5}));
+        System.out.println(binarySearch.maxNumberInMountain(new int[]{1,2,3,4,5,5,9,9,8,7,6}));
+
+
     }
 }
