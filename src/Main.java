@@ -7,9 +7,9 @@ public class Main {
         //strStr();
         //subSets();
         //subSetswDups();
-        strStr2();
+        //strStr2();
         //subSetswBit();
-        //binarySearch();
+        binarySearch();
 
     }
 
@@ -37,14 +37,14 @@ public class Main {
         System.out.println(strStr2.implementstrStr2("tartarget", ""));
         System.out.println(strStr2.implementstrStr2("", "target"));
         */
-        System.out.println(strStr2.strSTR2wRk("abcdf", "abcd"));
-        System.out.println(strStr2.strSTR2wRk("abcdf", "bcd"));
-        System.out.println(strStr2.strSTR2wRk("abcdf", "de"));
-        System.out.println(strStr2.strSTR2wRk("abcdf", "df"));
-        System.out.println(strStr2.strSTR2wRk("abcdf", ""));
-        System.out.println(strStr2.strSTR2wRk("tartarget", "target"));
-        System.out.println(strStr2.strSTR2wRk("tartarget", ""));
-        System.out.println(strStr2.strSTR2wRk("", "target"));
+        System.out.println(strStr2.strSTR2wRk("abc", "ab"));
+        //System.out.println(strStr2.strSTR2wRk("abcdfghi", "bc"));
+        //System.out.println(strStr2.strSTR2wRk("abcdf", "de"));
+        //System.out.println(strStr2.strSTR2wRk("abcdf", "df"));
+        //System.out.println(strStr2.strSTR2wRk("abcdf", ""));
+        //System.out.println(strStr2.strSTR2wRk("tartarget", "target"));
+        //System.out.println(strStr2.strSTR2wRk("tartarget", ""));
+        //System.out.println(strStr2.strSTR2wRk("", "target"));
 
 
     }
@@ -91,7 +91,8 @@ public class Main {
         //System.out.println(binarySearch.binarySearchRecursion(new int[] {0,1,2,3,4,5}, -1));
         //System.out.println(binarySearch.binarySearchRecursion(new int[] {0,1,2,3,4,5}, 6));
         //System.out.println(binarySearch.binarySearchRecursion(new int[] {0,0,0,0,0,0}, 6));
-        System.out.println(binarySearch.binarySearchRecursion(new int[] {0,0,1,1,2,2}, 2));
-        System.out.println(binarySearch.binarySearchFirst(new int[] {0,0,1,1,2,3}, 1));
+        //System.out.println(binarySearch.binarySearchRecursion(new int[] {0,0,1,1,2,2}, 2));
+        //System.out.println(binarySearch.binarySearchFirst(new int[]{1, 2, 3, 3, 4, 5, 10}, 3));
+        System.out.println(binarySearch.binarySearchLast(new int[]{1, 3, 3, 3,3,3,3,3, 4}, 3));
     }
 }

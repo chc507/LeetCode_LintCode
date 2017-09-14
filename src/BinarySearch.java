@@ -6,11 +6,10 @@ public class BinarySearch {
         if (nums == null || nums.length == 0) {
             return -1;
         }
-
         Arrays.sort(nums);
         int lp = 0;
         int rp = nums.length - 1;
-            while(lp + 1 < rp){
+        while(lp + 1 < rp){
             //int mid = ( lp + rp ) / 2; //bad idea as lp + rp will over flow easily;
             int mid = lp + (rp - lp)/2;
             if (nums[mid] == target) {
@@ -67,7 +66,6 @@ public class BinarySearch {
 
         while(lp + 1 < rp){
             //int mid = ( lp + rp ) / 2; //bad idea as lp + rp will over flow easily;
-
             int mid = lp + (rp - lp)/2;
             if (nums[mid] == target) {
                 rp = mid;
@@ -86,6 +84,43 @@ public class BinarySearch {
         if(nums[rp] == target){
             return rp;
         }
+        return -1;
+    }
+
+    public int binarySearchLast(int [] nums, int target){
+        if (nums == null || nums.length == 0) {
+            return -1;
+        }
+
+        Arrays.sort(nums);
+        int result = -1;
+        int lp = 0;
+        int rp = nums.length - 1;
+
+        while(lp + 1 < rp){
+            int mid = lp + (rp - lp)/2;
+            if ( nums[mid] == target) {
+                if(nums[mid + 1] != target) {
+                    rp = mid;
+                } else {
+                    lp = mid;
+                }
+                //result = mid;
+            }else if (nums[mid] > target) {
+                rp = mid;
+            }else if (nums[mid] < target) {
+                lp = mid;
+            }
+        }
+
+        if(nums[rp] == target){
+            return rp;
+        }
+
+        if (nums[lp] == target) {
+            return lp;
+        }
+
         return -1;
 
     }
