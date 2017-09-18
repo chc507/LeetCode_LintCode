@@ -37,8 +37,8 @@ public class BinaryTree {
                 stack.push(current);
                 current = current.left;
             }
-            current = stack.pop(); // root
-            result.add(current.val);
+            current = stack.pop();
+            result.add(current.val); //pop the left sub
             current = current.right; //traversal through the right
         }
         return result;
