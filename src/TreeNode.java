@@ -7,5 +7,7 @@ public class TreeNode {
 
     public TreeNode(int x){
         this.val = x;
+        this.left = null;
+        this.right = null;
     }
 }
