@@ -52,7 +52,7 @@ public class BinaryTree {
         ArrayList<TreeNode> queue = new ArrayList<TreeNode>();
         queue.add(root);
 
-        //populate the queue with BFS
+        //populate the queue with BFSProblem
         for (int i = 0; i < queue.size(); i++) {
             TreeNode focusNode = queue.get(i);
             if(focusNode == null) {
