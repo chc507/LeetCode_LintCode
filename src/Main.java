@@ -9,7 +9,8 @@ public class Main {
         //subSetswDups();
         //strStr2();
         //subSetswBit();
-        binarySearch();
+        //binarySearch();
+        sortArr();
 
     }
 
@@ -117,5 +118,12 @@ public class Main {
 
 
 
+    }
+
+    public static void sortArr(){
+        Sorting sort = new Sorting();
+        int[] test0 = new int[]{15,3,9,8,5,2,7,1,6};
+        sort.myQuickSort(test0);
+        sort.printArray(test0);
     }
 }
