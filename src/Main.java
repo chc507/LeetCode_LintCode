@@ -111,10 +111,11 @@ public class Main {
         System.out.println(binarySearch.findPeak(new int[]{1,2,3,4,5,5,9,9,8,14,7,6}));
         */
 
-        System.out.println(binarySearch.rotateSortedArray(new int[]{0,1,2,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1}, -9));
         //System.out.println(binarySearch.rotateSortedArray(new int[]{0,1,2,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1}, -9));
         //System.out.println(binarySearch.rotateSortedArray(new int[]{0,1,2,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1}, -9));
-
+        //System.out.println(binarySearch.rotateSortedArray(new int[]{0,1,2,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1}, -9));
+        System.out.println(binarySearch.search2DMatrix(new int[][]{{5}},2));
+        System.out.println(binarySearch.search2DMatrix(new int[][]{{1,3,5,7},{10,11,16,20},{23,30,34,50}},7));
 
 
 

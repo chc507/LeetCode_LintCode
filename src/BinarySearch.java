@@ -207,4 +207,42 @@ public class BinarySearch {
 
         return -1;
     }
+
+    public boolean search2DMatrix(int[][] matrix, int target){
+        // write your code here
+        //started from the bottom left corner
+        if (matrix == null || matrix.length== 0){
+            return false;
+        }
+
+
+        if (matrix[0] == null || matrix[0].length == 0){
+            return false;
+        }
+
+        int m = matrix.length;
+        int n = matrix[0].length;
+        int i = m - 1; // row pointer
+        int j = 0; // col pointer
+        int count = 0;
+
+        //start from the bottom corner
+        while( i >= 0 && j < n){
+            if(matrix[i][j] < target){
+                j++;
+            } else if (matrix[i][j] > target){
+                i--;
+            } else if (matrix[i][j] == target){
+                count++;
+                i--;
+                j++;
+            }
+        }
+
+        if(count > 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
