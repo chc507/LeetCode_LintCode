@@ -9,7 +9,8 @@ public class Sorting {
 
     public void myMergeSort(int[] arr) {
         int length  = arr.length;
-        mergeSort(0, length - 1, arr);
+        int[] temp = new int[length];
+        mergeSort(arr, 0, arr.length - 1, temp);
     }
 
     private void quickSortMidPivot(int start, int end, int[] arr) {
@@ -48,58 +49,44 @@ public class Sorting {
         arr[j] = temp;
     }
 
-    private void mergeSort(int start, int end, int[] arr) {
-        if (start < end) {
-            int mid = start + (end - start) / 2;
-            mergeSort(start,mid,arr);
-            mergeSort(mid + 1,end,arr);
-            merge(start, mid,end,arr);
+    private void mergeSort(int[] A, int start, int end, int[] temp) {
+        if (start >= end) {
+            return;
         }
+
+        int left = start, right = end;
+        int mid = (start + end) / 2;
+
+        mergeSort(A, start, mid, temp);
+        mergeSort(A, mid+1, end, temp);
+        merge(A, start, mid, end, temp);
     }
 
-    private void merge(int start, int mid, int end, int[] arr) {
-        //find size of two arrays to be merged
-        int n1 = mid - start + 1;
-        int n2 = end - mid;
+    private void merge(int[] A, int start, int mid, int end, int[] temp) {
+        int left = start;
+        int right = mid+1;
+        int index = start;
 
-        int[] leftArr = new int[n1];
-        int[] rightArr = new int[n2];
-
-        //copy data to temp array
-        for (int i = 0; i < n1; ++i){
-            leftArr[i] = arr[start + i];
-        }
-
-        for (int j= 0; j < n2; ++j) {
-            rightArr[j] = arr[mid + 1 + j];
-        }
-
-        int i = 0, j = 0, k = start;
-
-        while (i < n1 && j < n2) {
-            if (leftArr[i] <= rightArr[j]) {
-                arr[k] = leftArr[i];
-                i++;
+        // merge two sorted subarrays in A to temp array
+        while (left <= mid && right <= end) {
+            if (A[left] < A[right]) {
+                temp[index++] = A[left++];
             } else {
-                arr[k] = rightArr[j];
-                j++;
+                temp[index++] = A[right++];
             }
-            k++;
+        }
+        while (left <= mid) {
+            temp[index++] = A[left++];
+        }
+        while (right <= end) {
+            temp[index++] = A[right++];
         }
 
-        while (i < n1) {
-            arr[k] = leftArr[i];
-            k++;
-            i++;
-        }
-
-        while (j < n2) {
-            arr[j] = rightArr[j];
-            j++;
-            k++;
+        // copy temp back to A
+        for (index = start; index <= end; index++) {
+            A[index] = temp[index];
         }
     }
-
 
     public void printArray(int[] arr) {
         for (int i : arr) {

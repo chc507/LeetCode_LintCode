@@ -15,7 +15,8 @@ public class Main {
     }
 
     public static void strStr(){
-        ImplementStrStr implementStrStr = new ImplementStrStr();
+        /*
+        String.ImplementStrStr implementStrStr = new String.ImplementStrStr();
         System.out.println("result: " + implementStrStr.strStr("ab", "ab"));
         System.out.println("result: " + implementStrStr.strStr("ab", "abcd"));
         System.out.println("result: " + implementStrStr.strStr("ad", ""));
@@ -25,10 +26,12 @@ public class Main {
         System.out.println("result: " + implementStrStr.strStr("abcdefghijk", "ijk"));
         System.out.println("result: " + implementStrStr.strStr("", ""));
         System.out.println("result: " + implementStrStr.strStr("", "a"));
+        */
     }
     public static void strStr2(){
-        StrStr2 strStr2 = new StrStr2();
         /*
+        String.StrStr2 strStr2 = new String.StrStr2();
+
         System.out.println(strStr2.implementstrStr2("abcdf", "abcd"));
         System.out.println(strStr2.implementstrStr2("abcdf", "bcd"));
         System.out.println(strStr2.implementstrStr2("abcdf", "de"));
@@ -37,17 +40,8 @@ public class Main {
         System.out.println(strStr2.implementstrStr2("tartarget", "target"));
         System.out.println(strStr2.implementstrStr2("tartarget", ""));
         System.out.println(strStr2.implementstrStr2("", "target"));
-        */
         System.out.println(strStr2.strSTR2wRk("abc", "ab"));
-        //System.out.println(strStr2.strSTR2wRk("abcdfghi", "bc"));
-        //System.out.println(strStr2.strSTR2wRk("abcdf", "de"));
-        //System.out.println(strStr2.strSTR2wRk("abcdf", "df"));
-        //System.out.println(strStr2.strSTR2wRk("abcdf", ""));
-        //System.out.println(strStr2.strSTR2wRk("tartarget", "target"));
-        //System.out.println(strStr2.strSTR2wRk("tartarget", ""));
-        //System.out.println(strStr2.strSTR2wRk("", "target"));
-
-
+        */
     }
     public static void subSets(){
         Subset subset1 = new Subset();
@@ -124,7 +118,8 @@ public class Main {
     public static void sortArr(){
         Sorting sort = new Sorting();
         int[] test0 = new int[]{15,3,9,8,5,2,7,1,6};
-        sort.myQuickSort(test0);
+        //sort.myQuickSort(test0);
+        sort.myMergeSort(test0);
         sort.printArray(test0);
     }
 }

@@ -1,3 +1,5 @@
+package String;
+
 public class StrStr2 {
     public int BASE = 10;
     public StrStr2(){}
