@@ -28,13 +28,15 @@ public class ReconstructFlights {
 
     //dfs
     private void helper(Map<String, PriorityQueue<String>> map, List<String>path, String depart) {
-        //get the arrivals of the departutre
+        //get the arrivals of the departure
         //traverse all the arrivals
         PriorityQueue<String> arrivals = map.get(depart);
         while(arrivals != null && !arrivals.isEmpty()) {
             String arrival = arrivals.poll();
             helper(map, path, arrival);
         }
+
+
         //once all the neighbor are visited, add to the path
         path.add(depart);
     }
